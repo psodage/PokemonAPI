@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Finder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <h1>Pokémon Finder</h1>
+            <p>Look up any Pokémon by Pokédex number (1–1025).</p>
+        </header>
+
+        <section class="card search-panel">
+            <form id="search-form" class="search-form" novalidate>
+                <label class="field">
+                    <span class="field-label">Pokédex number</span>
+                    <input
+                        type="number"
+                        id="dex-input"
+                        name="pokemon_number"
+                        min="1"
+                        max="1025"
+                        placeholder="e.g. 25"
+                        required
+                    >
+                </label>
+                <button type="submit" class="btn btn-primary">Find Pokémon</button>
+            </form>
+        </section>
+
+        <section id="result" class="card result-panel" hidden aria-live="polite"></section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
