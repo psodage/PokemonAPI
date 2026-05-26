@@ -10,20 +10,19 @@
     <main class="page">
         <header class="page-header">
             <h1>Pokémon Finder</h1>
-            <p>Look up any Pokémon by Pokédex number (1–1025).</p>
+            <p>Look up any Pokémon by Pokédex number (1–1025) or name.</p>
         </header>
 
         <section class="card search-panel">
             <form id="search-form" class="search-form" novalidate>
                 <label class="field">
-                    <span class="field-label">Pokédex number</span>
+                    <span class="field-label">Pokédex number or name</span>
                     <input
-                        type="number"
-                        id="dex-input"
-                        name="pokemon_number"
-                        min="1"
-                        max="1025"
-                        placeholder="e.g. 25"
+                        type="text"
+                        id="query-input"
+                        name="query"
+                        placeholder="e.g. 25 or pikachu"
+                        autocomplete="off"
                         required
                     >
                 </label>
